@@ -1,0 +1,9 @@
+{
+  "type": "client-java",
+  "require": {
+    "sdkfabric/starwars": {
+      "target": "./src/main/java/org/sdkfabric/starwars",
+      "namespace": "org.sdkfabric.starwars"
+    }
+  }
+}
