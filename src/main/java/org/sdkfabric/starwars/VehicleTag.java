@@ -33,6 +33,9 @@ public class VehicleTag extends TagAbstract {
     }
 
 
+    /**
+     * Get all the vehicle resources
+     */
     public VehicleCollection getAll(String search) throws ClientException {
         try {
             Map<String, Object> pathParams = new HashMap<>();
@@ -64,6 +67,9 @@ public class VehicleTag extends TagAbstract {
         }
     }
 
+    /**
+     * Get a specific vehicle resource
+     */
     public Vehicle get(String id) throws ClientException {
         try {
             Map<String, Object> pathParams = new HashMap<>();

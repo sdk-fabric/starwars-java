@@ -33,6 +33,9 @@ public class PlanetTag extends TagAbstract {
     }
 
 
+    /**
+     * Get all the planets resources
+     */
     public PlanetCollection getAll(String search) throws ClientException {
         try {
             Map<String, Object> pathParams = new HashMap<>();
@@ -64,6 +67,9 @@ public class PlanetTag extends TagAbstract {
         }
     }
 
+    /**
+     * Get a specific planets resource
+     */
     public Planet get(String id) throws ClientException {
         try {
             Map<String, Object> pathParams = new HashMap<>();

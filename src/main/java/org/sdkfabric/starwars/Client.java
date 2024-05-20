@@ -90,8 +90,8 @@ public class Client extends ClientAbstract {
 
 
 
-    public static Client build(String clientId, String clientSecret, TokenStoreInterface tokenStore, List<String> scopes) throws InvalidCredentialsException
+    public static Client build(CredentialsInterface credentials) throws InvalidCredentialsException
     {
-        return new Client("https://swapi.dev/api", new OAuth2(clientId, clientSecret, "https://api.typehub.cloud/authorization/token", "", tokenStore, scopes));
+        return new Client("https://swapi.dev/api", credentials);
     }
 }

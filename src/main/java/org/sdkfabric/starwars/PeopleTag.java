@@ -33,6 +33,9 @@ public class PeopleTag extends TagAbstract {
     }
 
 
+    /**
+     * Get all the people resources
+     */
     public PeopleCollection getAll(String search) throws ClientException {
         try {
             Map<String, Object> pathParams = new HashMap<>();
@@ -64,6 +67,9 @@ public class PeopleTag extends TagAbstract {
         }
     }
 
+    /**
+     * Get a specific people resource
+     */
     public People get(String id) throws ClientException {
         try {
             Map<String, Object> pathParams = new HashMap<>();

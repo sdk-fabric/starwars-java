@@ -33,6 +33,9 @@ public class SpecieTag extends TagAbstract {
     }
 
 
+    /**
+     * Get all the species resources
+     */
     public SpecieCollection getAll(String search) throws ClientException {
         try {
             Map<String, Object> pathParams = new HashMap<>();
@@ -64,6 +67,9 @@ public class SpecieTag extends TagAbstract {
         }
     }
 
+    /**
+     * Get a specific species resource
+     */
     public Specie get(String id) throws ClientException {
         try {
             Map<String, Object> pathParams = new HashMap<>();

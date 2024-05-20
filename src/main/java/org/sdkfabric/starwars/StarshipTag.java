@@ -33,6 +33,9 @@ public class StarshipTag extends TagAbstract {
     }
 
 
+    /**
+     * Get all the starship resources
+     */
     public StarshipCollection getAll(String search) throws ClientException {
         try {
             Map<String, Object> pathParams = new HashMap<>();
@@ -64,6 +67,9 @@ public class StarshipTag extends TagAbstract {
         }
     }
 
+    /**
+     * Get a specific starship resource
+     */
     public Starship get(String id) throws ClientException {
         try {
             Map<String, Object> pathParams = new HashMap<>();

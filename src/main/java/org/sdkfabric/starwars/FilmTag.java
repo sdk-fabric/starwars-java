@@ -33,6 +33,9 @@ public class FilmTag extends TagAbstract {
     }
 
 
+    /**
+     * Get all the film resources
+     */
     public FilmCollection getAll(String search) throws ClientException {
         try {
             Map<String, Object> pathParams = new HashMap<>();
@@ -64,6 +67,9 @@ public class FilmTag extends TagAbstract {
         }
     }
 
+    /**
+     * Get a specific film resource
+     */
     public Film get(String id) throws ClientException {
         try {
             Map<String, Object> pathParams = new HashMap<>();
