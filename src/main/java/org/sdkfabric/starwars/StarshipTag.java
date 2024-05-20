@@ -33,13 +33,12 @@ public class StarshipTag extends TagAbstract {
     }
 
 
-    public StarshipCollection getAll(String name, String model) throws ClientException {
+    public StarshipCollection getAll(String search) throws ClientException {
         try {
             Map<String, Object> pathParams = new HashMap<>();
 
             Map<String, Object> queryParams = new HashMap<>();
-            queryParams.put("name", name);
-            queryParams.put("model", model);
+            queryParams.put("search", search);
 
             List<String> queryStructNames = new ArrayList<>();
 

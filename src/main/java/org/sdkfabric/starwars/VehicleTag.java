@@ -33,13 +33,12 @@ public class VehicleTag extends TagAbstract {
     }
 
 
-    public VehicleCollection getAll(String name, String model) throws ClientException {
+    public VehicleCollection getAll(String search) throws ClientException {
         try {
             Map<String, Object> pathParams = new HashMap<>();
 
             Map<String, Object> queryParams = new HashMap<>();
-            queryParams.put("name", name);
-            queryParams.put("model", model);
+            queryParams.put("search", search);
 
             List<String> queryStructNames = new ArrayList<>();
 

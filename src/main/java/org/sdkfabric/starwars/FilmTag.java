@@ -33,12 +33,12 @@ public class FilmTag extends TagAbstract {
     }
 
 
-    public FilmCollection getAll(String title) throws ClientException {
+    public FilmCollection getAll(String search) throws ClientException {
         try {
             Map<String, Object> pathParams = new HashMap<>();
 
             Map<String, Object> queryParams = new HashMap<>();
-            queryParams.put("title", title);
+            queryParams.put("search", search);
 
             List<String> queryStructNames = new ArrayList<>();
 

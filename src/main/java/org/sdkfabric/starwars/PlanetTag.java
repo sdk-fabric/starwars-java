@@ -33,12 +33,12 @@ public class PlanetTag extends TagAbstract {
     }
 
 
-    public PlanetCollection getAll(String name) throws ClientException {
+    public PlanetCollection getAll(String search) throws ClientException {
         try {
             Map<String, Object> pathParams = new HashMap<>();
 
             Map<String, Object> queryParams = new HashMap<>();
-            queryParams.put("name", name);
+            queryParams.put("search", search);
 
             List<String> queryStructNames = new ArrayList<>();
 

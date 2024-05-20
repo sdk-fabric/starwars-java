@@ -33,12 +33,12 @@ public class SpecieTag extends TagAbstract {
     }
 
 
-    public SpecieCollection getAll(String name) throws ClientException {
+    public SpecieCollection getAll(String search) throws ClientException {
         try {
             Map<String, Object> pathParams = new HashMap<>();
 
             Map<String, Object> queryParams = new HashMap<>();
-            queryParams.put("name", name);
+            queryParams.put("search", search);
 
             List<String> queryStructNames = new ArrayList<>();
 
