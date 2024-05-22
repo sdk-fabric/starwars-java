@@ -90,8 +90,8 @@ public class Client extends ClientAbstract {
 
 
 
-    public static Client build(CredentialsInterface credentials) throws InvalidCredentialsException
+    public static Client build() throws InvalidCredentialsException
     {
-        return new Client("https://swapi.dev/api", credentials);
+        return new Client("https://swapi.dev/api", new Anonymous());
     }
 }

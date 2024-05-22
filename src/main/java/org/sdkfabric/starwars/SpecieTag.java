@@ -68,7 +68,7 @@ public class SpecieTag extends TagAbstract {
     }
 
     /**
-     * Get a specific specie
+     * Get a specific species
      */
     public Specie get(String id) throws ClientException {
         try {
