@@ -34,7 +34,7 @@ public class VehicleTag extends TagAbstract {
 
 
     /**
-     * Get all the vehicle resources
+     * Get all the vehicles
      */
     public VehicleCollection getAll(String search) throws ClientException {
         try {
@@ -68,7 +68,7 @@ public class VehicleTag extends TagAbstract {
     }
 
     /**
-     * Get a specific vehicle resource
+     * Get a specific vehicle
      */
     public Vehicle get(String id) throws ClientException {
         try {

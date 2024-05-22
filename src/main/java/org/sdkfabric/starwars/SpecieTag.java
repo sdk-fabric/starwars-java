@@ -34,7 +34,7 @@ public class SpecieTag extends TagAbstract {
 
 
     /**
-     * Get all the species resources
+     * Get all the species
      */
     public SpecieCollection getAll(String search) throws ClientException {
         try {
@@ -68,7 +68,7 @@ public class SpecieTag extends TagAbstract {
     }
 
     /**
-     * Get a specific species resource
+     * Get a specific specie
      */
     public Specie get(String id) throws ClientException {
         try {

@@ -34,7 +34,7 @@ public class StarshipTag extends TagAbstract {
 
 
     /**
-     * Get all the starship resources
+     * Get all the starships
      */
     public StarshipCollection getAll(String search) throws ClientException {
         try {
@@ -68,7 +68,7 @@ public class StarshipTag extends TagAbstract {
     }
 
     /**
-     * Get a specific starship resource
+     * Get a specific starship
      */
     public Starship get(String id) throws ClientException {
         try {

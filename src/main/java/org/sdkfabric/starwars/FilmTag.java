@@ -34,7 +34,7 @@ public class FilmTag extends TagAbstract {
 
 
     /**
-     * Get all the film resources
+     * Get all the films
      */
     public FilmCollection getAll(String search) throws ClientException {
         try {
@@ -68,7 +68,7 @@ public class FilmTag extends TagAbstract {
     }
 
     /**
-     * Get a specific film resource
+     * Get a specific film
      */
     public Film get(String id) throws ClientException {
         try {

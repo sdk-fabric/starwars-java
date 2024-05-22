@@ -34,7 +34,7 @@ public class PlanetTag extends TagAbstract {
 
 
     /**
-     * Get all the planets resources
+     * Get all the planets
      */
     public PlanetCollection getAll(String search) throws ClientException {
         try {
@@ -68,7 +68,7 @@ public class PlanetTag extends TagAbstract {
     }
 
     /**
-     * Get a specific planets resource
+     * Get a specific planet
      */
     public Planet get(String id) throws ClientException {
         try {

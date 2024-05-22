@@ -34,7 +34,7 @@ public class PeopleTag extends TagAbstract {
 
 
     /**
-     * Get all the people resources
+     * Get all the people
      */
     public PeopleCollection getAll(String search) throws ClientException {
         try {
@@ -68,7 +68,7 @@ public class PeopleTag extends TagAbstract {
     }
 
     /**
-     * Get a specific people resource
+     * Get a specific people
      */
     public People get(String id) throws ClientException {
         try {

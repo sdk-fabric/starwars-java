@@ -11,7 +11,7 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 /**
- * A Species resource is a type of person or character within the Star Wars Universe.
+ * A Species is a type of person or character within the Star Wars Universe.
  */
 public class Specie {
     private String name;

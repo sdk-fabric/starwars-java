@@ -12,7 +12,7 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 /**
- * A Film resource is a single film.
+ * A Film is a single film.
  */
 public class Film {
     private String title;
