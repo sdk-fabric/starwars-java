@@ -61,18 +61,18 @@ public class Client extends ClientAbstract {
         );
     }
 
-    public VehicleTag vehicle()
+    public SpeciesTag species()
     {
-        return new VehicleTag(
+        return new SpeciesTag(
             this.httpClient,
             this.objectMapper,
             this.parser
         );
     }
 
-    public SpecieTag specie()
+    public VehicleTag vehicle()
     {
-        return new SpecieTag(
+        return new VehicleTag(
             this.httpClient,
             this.objectMapper,
             this.parser
