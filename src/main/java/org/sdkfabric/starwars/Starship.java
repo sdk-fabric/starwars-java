@@ -11,7 +11,7 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 /**
- * A Starship is a single transport craft that has hyperdrive capability.
+ * A Starship is a single transport craft that has hyperdrive capability
  */
 public class Starship {
     private String name;

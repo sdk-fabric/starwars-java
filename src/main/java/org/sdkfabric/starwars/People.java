@@ -11,7 +11,7 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 /**
- * A People is an individual person or character within the Star Wars universe.
+ * A People is an individual person or character within the Star Wars universe
  */
 public class People {
     private String name;

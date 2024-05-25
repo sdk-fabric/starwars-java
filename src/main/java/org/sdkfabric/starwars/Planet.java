@@ -11,7 +11,7 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 /**
- * A Planet is a large mass, planet or planetoid in the Star Wars Universe, at the time of 0 ABY.
+ * A Planet is a large mass, planet or planetoid in the Star Wars Universe, at the time of 0 ABY
  */
 public class Planet {
     private String name;

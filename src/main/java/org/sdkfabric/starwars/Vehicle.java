@@ -11,7 +11,7 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 /**
- * A Vehicle is a single transport craft that does not have hyperdrive capability.
+ * A Vehicle is a single transport craft that does not have hyperdrive capability
  */
 public class Vehicle {
     private String name;
