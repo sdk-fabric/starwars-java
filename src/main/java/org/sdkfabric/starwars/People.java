@@ -7,8 +7,6 @@ package org.sdkfabric.starwars;
 
 import com.fasterxml.jackson.annotation.JsonGetter;
 import com.fasterxml.jackson.annotation.JsonSetter;
-import java.time.LocalDateTime;
-import java.util.List;
 
 /**
  * A People is an individual person or character within the Star Wars universe
@@ -23,13 +21,13 @@ public class People {
     private String mass;
     private String skinColor;
     private String homeworld;
-    private List<String> films;
-    private List<String> species;
-    private List<String> starships;
-    private List<String> vehicles;
+    private java.util.List<String> films;
+    private java.util.List<String> species;
+    private java.util.List<String> starships;
+    private java.util.List<String> vehicles;
     private String url;
-    private LocalDateTime created;
-    private LocalDateTime edited;
+    private java.time.LocalDateTime created;
+    private java.time.LocalDateTime edited;
     @JsonSetter("name")
     public void setName(String name) {
         this.name = name;
@@ -103,35 +101,35 @@ public class People {
         return this.homeworld;
     }
     @JsonSetter("films")
-    public void setFilms(List<String> films) {
+    public void setFilms(java.util.List<String> films) {
         this.films = films;
     }
     @JsonGetter("films")
-    public List<String> getFilms() {
+    public java.util.List<String> getFilms() {
         return this.films;
     }
     @JsonSetter("species")
-    public void setSpecies(List<String> species) {
+    public void setSpecies(java.util.List<String> species) {
         this.species = species;
     }
     @JsonGetter("species")
-    public List<String> getSpecies() {
+    public java.util.List<String> getSpecies() {
         return this.species;
     }
     @JsonSetter("starships")
-    public void setStarships(List<String> starships) {
+    public void setStarships(java.util.List<String> starships) {
         this.starships = starships;
     }
     @JsonGetter("starships")
-    public List<String> getStarships() {
+    public java.util.List<String> getStarships() {
         return this.starships;
     }
     @JsonSetter("vehicles")
-    public void setVehicles(List<String> vehicles) {
+    public void setVehicles(java.util.List<String> vehicles) {
         this.vehicles = vehicles;
     }
     @JsonGetter("vehicles")
-    public List<String> getVehicles() {
+    public java.util.List<String> getVehicles() {
         return this.vehicles;
     }
     @JsonSetter("url")
@@ -143,19 +141,19 @@ public class People {
         return this.url;
     }
     @JsonSetter("created")
-    public void setCreated(LocalDateTime created) {
+    public void setCreated(java.time.LocalDateTime created) {
         this.created = created;
     }
     @JsonGetter("created")
-    public LocalDateTime getCreated() {
+    public java.time.LocalDateTime getCreated() {
         return this.created;
     }
     @JsonSetter("edited")
-    public void setEdited(LocalDateTime edited) {
+    public void setEdited(java.time.LocalDateTime edited) {
         this.edited = edited;
     }
     @JsonGetter("edited")
-    public LocalDateTime getEdited() {
+    public java.time.LocalDateTime getEdited() {
         return this.edited;
     }
 }

@@ -7,15 +7,14 @@ package org.sdkfabric.starwars;
 
 import com.fasterxml.jackson.annotation.JsonGetter;
 import com.fasterxml.jackson.annotation.JsonSetter;
-import java.util.List;
 public class FilmCollection extends Collection {
-    private List<Film> results;
+    private java.util.List<Film> results;
     @JsonSetter("results")
-    public void setResults(List<Film> results) {
+    public void setResults(java.util.List<Film> results) {
         this.results = results;
     }
     @JsonGetter("results")
-    public List<Film> getResults() {
+    public java.util.List<Film> getResults() {
         return this.results;
     }
 }
