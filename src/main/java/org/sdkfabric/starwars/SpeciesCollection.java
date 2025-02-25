@@ -7,15 +7,14 @@ package org.sdkfabric.starwars;
 
 import com.fasterxml.jackson.annotation.JsonGetter;
 import com.fasterxml.jackson.annotation.JsonSetter;
-import java.util.List;
 public class SpeciesCollection extends Collection {
-    private List<Species> results;
+    private java.util.List<Species> results;
     @JsonSetter("results")
-    public void setResults(List<Species> results) {
+    public void setResults(java.util.List<Species> results) {
         this.results = results;
     }
     @JsonGetter("results")
-    public List<Species> getResults() {
+    public java.util.List<Species> getResults() {
         return this.results;
     }
 }

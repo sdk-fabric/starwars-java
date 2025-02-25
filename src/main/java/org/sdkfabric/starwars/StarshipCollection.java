@@ -7,15 +7,14 @@ package org.sdkfabric.starwars;
 
 import com.fasterxml.jackson.annotation.JsonGetter;
 import com.fasterxml.jackson.annotation.JsonSetter;
-import java.util.List;
 public class StarshipCollection extends Collection {
-    private List<Starship> results;
+    private java.util.List<Starship> results;
     @JsonSetter("results")
-    public void setResults(List<Starship> results) {
+    public void setResults(java.util.List<Starship> results) {
         this.results = results;
     }
     @JsonGetter("results")
-    public List<Starship> getResults() {
+    public java.util.List<Starship> getResults() {
         return this.results;
     }
 }

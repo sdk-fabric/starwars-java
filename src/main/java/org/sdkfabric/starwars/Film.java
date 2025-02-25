@@ -7,9 +7,6 @@ package org.sdkfabric.starwars;
 
 import com.fasterxml.jackson.annotation.JsonGetter;
 import com.fasterxml.jackson.annotation.JsonSetter;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.util.List;
 
 /**
  * A Film is a single film
@@ -20,15 +17,15 @@ public class Film {
     private String openingCrawl;
     private String director;
     private String producer;
-    private LocalDate releaseDate;
-    private List<String> species;
-    private List<String> starships;
-    private List<String> vehicles;
-    private List<String> characters;
-    private List<String> planets;
+    private java.time.LocalDate releaseDate;
+    private java.util.List<String> species;
+    private java.util.List<String> starships;
+    private java.util.List<String> vehicles;
+    private java.util.List<String> characters;
+    private java.util.List<String> planets;
     private String url;
-    private LocalDateTime created;
-    private LocalDateTime edited;
+    private java.time.LocalDateTime created;
+    private java.time.LocalDateTime edited;
     @JsonSetter("title")
     public void setTitle(String title) {
         this.title = title;
@@ -70,51 +67,51 @@ public class Film {
         return this.producer;
     }
     @JsonSetter("release_date")
-    public void setReleaseDate(LocalDate releaseDate) {
+    public void setReleaseDate(java.time.LocalDate releaseDate) {
         this.releaseDate = releaseDate;
     }
     @JsonGetter("release_date")
-    public LocalDate getReleaseDate() {
+    public java.time.LocalDate getReleaseDate() {
         return this.releaseDate;
     }
     @JsonSetter("species")
-    public void setSpecies(List<String> species) {
+    public void setSpecies(java.util.List<String> species) {
         this.species = species;
     }
     @JsonGetter("species")
-    public List<String> getSpecies() {
+    public java.util.List<String> getSpecies() {
         return this.species;
     }
     @JsonSetter("starships")
-    public void setStarships(List<String> starships) {
+    public void setStarships(java.util.List<String> starships) {
         this.starships = starships;
     }
     @JsonGetter("starships")
-    public List<String> getStarships() {
+    public java.util.List<String> getStarships() {
         return this.starships;
     }
     @JsonSetter("vehicles")
-    public void setVehicles(List<String> vehicles) {
+    public void setVehicles(java.util.List<String> vehicles) {
         this.vehicles = vehicles;
     }
     @JsonGetter("vehicles")
-    public List<String> getVehicles() {
+    public java.util.List<String> getVehicles() {
         return this.vehicles;
     }
     @JsonSetter("characters")
-    public void setCharacters(List<String> characters) {
+    public void setCharacters(java.util.List<String> characters) {
         this.characters = characters;
     }
     @JsonGetter("characters")
-    public List<String> getCharacters() {
+    public java.util.List<String> getCharacters() {
         return this.characters;
     }
     @JsonSetter("planets")
-    public void setPlanets(List<String> planets) {
+    public void setPlanets(java.util.List<String> planets) {
         this.planets = planets;
     }
     @JsonGetter("planets")
-    public List<String> getPlanets() {
+    public java.util.List<String> getPlanets() {
         return this.planets;
     }
     @JsonSetter("url")
@@ -126,19 +123,19 @@ public class Film {
         return this.url;
     }
     @JsonSetter("created")
-    public void setCreated(LocalDateTime created) {
+    public void setCreated(java.time.LocalDateTime created) {
         this.created = created;
     }
     @JsonGetter("created")
-    public LocalDateTime getCreated() {
+    public java.time.LocalDateTime getCreated() {
         return this.created;
     }
     @JsonSetter("edited")
-    public void setEdited(LocalDateTime edited) {
+    public void setEdited(java.time.LocalDateTime edited) {
         this.edited = edited;
     }
     @JsonGetter("edited")
-    public LocalDateTime getEdited() {
+    public java.time.LocalDateTime getEdited() {
         return this.edited;
     }
 }

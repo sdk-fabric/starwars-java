@@ -7,8 +7,6 @@ package org.sdkfabric.starwars;
 
 import com.fasterxml.jackson.annotation.JsonGetter;
 import com.fasterxml.jackson.annotation.JsonSetter;
-import java.time.LocalDateTime;
-import java.util.List;
 
 /**
  * A Planet is a large mass, planet or planetoid in the Star Wars Universe, at the time of 0 ABY
@@ -23,11 +21,11 @@ public class Planet {
     private String climate;
     private String terrain;
     private String surfaceWater;
-    private List<String> residents;
-    private List<String> films;
+    private java.util.List<String> residents;
+    private java.util.List<String> films;
     private String url;
-    private LocalDateTime created;
-    private LocalDateTime edited;
+    private java.time.LocalDateTime created;
+    private java.time.LocalDateTime edited;
     @JsonSetter("name")
     public void setName(String name) {
         this.name = name;
@@ -101,19 +99,19 @@ public class Planet {
         return this.surfaceWater;
     }
     @JsonSetter("residents")
-    public void setResidents(List<String> residents) {
+    public void setResidents(java.util.List<String> residents) {
         this.residents = residents;
     }
     @JsonGetter("residents")
-    public List<String> getResidents() {
+    public java.util.List<String> getResidents() {
         return this.residents;
     }
     @JsonSetter("films")
-    public void setFilms(List<String> films) {
+    public void setFilms(java.util.List<String> films) {
         this.films = films;
     }
     @JsonGetter("films")
-    public List<String> getFilms() {
+    public java.util.List<String> getFilms() {
         return this.films;
     }
     @JsonSetter("url")
@@ -125,19 +123,19 @@ public class Planet {
         return this.url;
     }
     @JsonSetter("created")
-    public void setCreated(LocalDateTime created) {
+    public void setCreated(java.time.LocalDateTime created) {
         this.created = created;
     }
     @JsonGetter("created")
-    public LocalDateTime getCreated() {
+    public java.time.LocalDateTime getCreated() {
         return this.created;
     }
     @JsonSetter("edited")
-    public void setEdited(LocalDateTime edited) {
+    public void setEdited(java.time.LocalDateTime edited) {
         this.edited = edited;
     }
     @JsonGetter("edited")
-    public LocalDateTime getEdited() {
+    public java.time.LocalDateTime getEdited() {
         return this.edited;
     }
 }
