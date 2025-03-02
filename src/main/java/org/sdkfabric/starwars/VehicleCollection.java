@@ -5,16 +5,19 @@
 
 package org.sdkfabric.starwars;
 
-import com.fasterxml.jackson.annotation.JsonGetter;
-import com.fasterxml.jackson.annotation.JsonSetter;
+import com.fasterxml.jackson.annotation.*;
+
 public class VehicleCollection extends Collection {
     private java.util.List<Vehicle> results;
+
     @JsonSetter("results")
     public void setResults(java.util.List<Vehicle> results) {
         this.results = results;
     }
+
     @JsonGetter("results")
     public java.util.List<Vehicle> getResults() {
         return this.results;
     }
 }
+

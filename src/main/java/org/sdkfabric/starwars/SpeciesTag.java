@@ -61,6 +61,8 @@ public class SpeciesTag extends TagAbstract {
                 var statusCode = response.getCode();
                 throw new UnknownStatusCodeException("The server returned an unknown status code: " + statusCode);
             });
+        } catch (ClientException e) {
+            throw e;
         } catch (URISyntaxException | IOException e) {
             throw new ClientException("An unknown error occurred: " + e.getMessage(), e);
         }
@@ -94,6 +96,8 @@ public class SpeciesTag extends TagAbstract {
                 var statusCode = response.getCode();
                 throw new UnknownStatusCodeException("The server returned an unknown status code: " + statusCode);
             });
+        } catch (ClientException e) {
+            throw e;
         } catch (URISyntaxException | IOException e) {
             throw new ClientException("An unknown error occurred: " + e.getMessage(), e);
         }

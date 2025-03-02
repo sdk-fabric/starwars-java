@@ -5,137 +5,177 @@
 
 package org.sdkfabric.starwars;
 
-import com.fasterxml.jackson.annotation.JsonGetter;
-import com.fasterxml.jackson.annotation.JsonSetter;
+import com.fasterxml.jackson.annotation.*;
 
-/**
- * A Film is a single film
- */
+@JsonClassDescription("A Film is a single film")
 public class Film {
+    @JsonPropertyDescription("The title of this film")
     private String title;
+    @JsonPropertyDescription("The episode number of this film")
     private Integer episodeId;
+    @JsonPropertyDescription("The opening paragraphs at the beginning of this film")
     private String openingCrawl;
+    @JsonPropertyDescription("The name of the director of this film")
     private String director;
+    @JsonPropertyDescription("The name(s) of the producer(s) of this film. Comma separated")
     private String producer;
+    @JsonPropertyDescription("The ISO 8601 date format of film release at original creator country")
     private java.time.LocalDate releaseDate;
+    @JsonPropertyDescription("An array of species resource URLs that are in this film")
     private java.util.List<String> species;
+    @JsonPropertyDescription("An array of starship resource URLs that are in this film")
     private java.util.List<String> starships;
+    @JsonPropertyDescription("An array of vehicle resource URLs that are in this film")
     private java.util.List<String> vehicles;
+    @JsonPropertyDescription("An array of people resource URLs that are in this film")
     private java.util.List<String> characters;
+    @JsonPropertyDescription("An array of planet resource URLs that are in this film")
     private java.util.List<String> planets;
+    @JsonPropertyDescription("The hypermedia URL of this resource")
     private String url;
+    @JsonPropertyDescription("The ISO 8601 date format of the time that this resource was created")
     private java.time.LocalDateTime created;
+    @JsonPropertyDescription("The ISO 8601 date format of the time that this resource was edited")
     private java.time.LocalDateTime edited;
+
     @JsonSetter("title")
     public void setTitle(String title) {
         this.title = title;
     }
+
     @JsonGetter("title")
     public String getTitle() {
         return this.title;
     }
+
     @JsonSetter("episode_id")
     public void setEpisodeId(Integer episodeId) {
         this.episodeId = episodeId;
     }
+
     @JsonGetter("episode_id")
     public Integer getEpisodeId() {
         return this.episodeId;
     }
+
     @JsonSetter("opening_crawl")
     public void setOpeningCrawl(String openingCrawl) {
         this.openingCrawl = openingCrawl;
     }
+
     @JsonGetter("opening_crawl")
     public String getOpeningCrawl() {
         return this.openingCrawl;
     }
+
     @JsonSetter("director")
     public void setDirector(String director) {
         this.director = director;
     }
+
     @JsonGetter("director")
     public String getDirector() {
         return this.director;
     }
+
     @JsonSetter("producer")
     public void setProducer(String producer) {
         this.producer = producer;
     }
+
     @JsonGetter("producer")
     public String getProducer() {
         return this.producer;
     }
+
     @JsonSetter("release_date")
     public void setReleaseDate(java.time.LocalDate releaseDate) {
         this.releaseDate = releaseDate;
     }
+
     @JsonGetter("release_date")
     public java.time.LocalDate getReleaseDate() {
         return this.releaseDate;
     }
+
     @JsonSetter("species")
     public void setSpecies(java.util.List<String> species) {
         this.species = species;
     }
+
     @JsonGetter("species")
     public java.util.List<String> getSpecies() {
         return this.species;
     }
+
     @JsonSetter("starships")
     public void setStarships(java.util.List<String> starships) {
         this.starships = starships;
     }
+
     @JsonGetter("starships")
     public java.util.List<String> getStarships() {
         return this.starships;
     }
+
     @JsonSetter("vehicles")
     public void setVehicles(java.util.List<String> vehicles) {
         this.vehicles = vehicles;
     }
+
     @JsonGetter("vehicles")
     public java.util.List<String> getVehicles() {
         return this.vehicles;
     }
+
     @JsonSetter("characters")
     public void setCharacters(java.util.List<String> characters) {
         this.characters = characters;
     }
+
     @JsonGetter("characters")
     public java.util.List<String> getCharacters() {
         return this.characters;
     }
+
     @JsonSetter("planets")
     public void setPlanets(java.util.List<String> planets) {
         this.planets = planets;
     }
+
     @JsonGetter("planets")
     public java.util.List<String> getPlanets() {
         return this.planets;
     }
+
     @JsonSetter("url")
     public void setUrl(String url) {
         this.url = url;
     }
+
     @JsonGetter("url")
     public String getUrl() {
         return this.url;
     }
+
     @JsonSetter("created")
     public void setCreated(java.time.LocalDateTime created) {
         this.created = created;
     }
+
     @JsonGetter("created")
     public java.time.LocalDateTime getCreated() {
         return this.created;
     }
+
     @JsonSetter("edited")
     public void setEdited(java.time.LocalDateTime edited) {
         this.edited = edited;
     }
+
     @JsonGetter("edited")
     public java.time.LocalDateTime getEdited() {
         return this.edited;
     }
 }
+
