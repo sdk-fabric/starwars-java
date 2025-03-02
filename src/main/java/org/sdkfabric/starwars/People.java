@@ -13,11 +13,11 @@ public class People {
     private String name;
     @JsonPropertyDescription("The birth year of the person, using the in-universe standard of BBY or ABY - Before the Battle of Yavin or After the Battle of Yavin. The Battle of Yavin is a battle that occurs at the end of Star Wars episode IV: A New Hope.")
     private String birthYear;
-    @JsonPropertyDescription("The eye color of this person. Will be "unknown" if not known or "n/a" if the person does not have an eye.")
+    @JsonPropertyDescription("The eye color of this person. Will be \"unknown\" if not known or \"n/a\" if the person does not have an eye.")
     private String eyeColor;
-    @JsonPropertyDescription("The gender of this person. Either "Male", "Female" or "unknown", "n/a" if the person does not have a gender.")
+    @JsonPropertyDescription("The gender of this person. Either \"Male\", \"Female\" or \"unknown\", \"n/a\" if the person does not have a gender.")
     private String gender;
-    @JsonPropertyDescription("The hair color of this person. Will be "unknown" if not known or "n/a" if the person does not have hair.")
+    @JsonPropertyDescription("The hair color of this person. Will be \"unknown\" if not known or \"n/a\" if the person does not have hair.")
     private String hairColor;
     @JsonPropertyDescription("The height of the person in centimeters.")
     private String height;
