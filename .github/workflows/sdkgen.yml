@@ -48,7 +48,7 @@ jobs:
           passphrase: ${{ secrets.GPG_PASSPHRASE }}
           trust_level: ultimate
       - name: Publish package
-        run: mvn --batch-mode clean deploy -Dgpg.keyname=${{ steps.import-gpg.outputs.keyid }}
+        run: mvn --batch-mode clean deploy -Dgpg.keyname=${{ steps.import-gpg.outputs.fingerprint }}
         env:
           MAVEN_USERNAME: ${{ secrets.SONATYPE_USERNAME }}
           MAVEN_PASSWORD: ${{ secrets.SONATYPE_PASSWORD }}
