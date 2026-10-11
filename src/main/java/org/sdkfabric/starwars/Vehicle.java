@@ -9,181 +9,181 @@ import com.fasterxml.jackson.annotation.*;
 
 @JsonClassDescription("A Vehicle is a single transport craft that does not have hyperdrive capability")
 public class Vehicle {
-    private String name;
-    private String model;
-    private String vehicleClass;
-    private String manufacturer;
-    private String length;
-    private String costInCredits;
-    private String crew;
-    private String passengers;
-    private String maxAtmospheringSpeed;
+    @JsonProperty("cargo_capacity")
     private String cargoCapacity;
+
+    @JsonProperty("consumables")
     private String consumables;
-    private java.util.List<String> films;
-    private java.util.List<String> pilots;
-    private String url;
+
+    @JsonProperty("cost_in_credits")
+    private String costInCredits;
+
+    @JsonProperty("created")
     private java.time.LocalDateTime created;
+
+    @JsonProperty("crew")
+    private String crew;
+
+    @JsonProperty("edited")
     private java.time.LocalDateTime edited;
 
-    @JsonSetter("name")
-    public void setName(String name) {
-        this.name = name;
-    }
+    @JsonProperty("films")
+    private java.util.List<String> films;
 
-    @JsonGetter("name")
-    public String getName() {
-        return this.name;
-    }
+    @JsonProperty("length")
+    private String length;
 
-    @JsonSetter("model")
-    public void setModel(String model) {
-        this.model = model;
-    }
+    @JsonProperty("manufacturer")
+    private String manufacturer;
 
-    @JsonGetter("model")
-    public String getModel() {
-        return this.model;
-    }
+    @JsonProperty("max_atmosphering_speed")
+    private String maxAtmospheringSpeed;
 
-    @JsonSetter("vehicle_class")
-    public void setVehicleClass(String vehicleClass) {
-        this.vehicleClass = vehicleClass;
-    }
+    @JsonProperty("model")
+    private String model;
 
-    @JsonGetter("vehicle_class")
-    public String getVehicleClass() {
-        return this.vehicleClass;
-    }
+    @JsonProperty("name")
+    private String name;
 
-    @JsonSetter("manufacturer")
-    public void setManufacturer(String manufacturer) {
-        this.manufacturer = manufacturer;
-    }
+    @JsonProperty("passengers")
+    private String passengers;
 
-    @JsonGetter("manufacturer")
-    public String getManufacturer() {
-        return this.manufacturer;
-    }
+    @JsonProperty("pilots")
+    private java.util.List<String> pilots;
 
-    @JsonSetter("length")
-    public void setLength(String length) {
-        this.length = length;
-    }
+    @JsonProperty("url")
+    private String url;
 
-    @JsonGetter("length")
-    public String getLength() {
-        return this.length;
-    }
+    @JsonProperty("vehicle_class")
+    private String vehicleClass;
 
-    @JsonSetter("cost_in_credits")
-    public void setCostInCredits(String costInCredits) {
-        this.costInCredits = costInCredits;
-    }
 
-    @JsonGetter("cost_in_credits")
-    public String getCostInCredits() {
-        return this.costInCredits;
-    }
-
-    @JsonSetter("crew")
-    public void setCrew(String crew) {
-        this.crew = crew;
-    }
-
-    @JsonGetter("crew")
-    public String getCrew() {
-        return this.crew;
-    }
-
-    @JsonSetter("passengers")
-    public void setPassengers(String passengers) {
-        this.passengers = passengers;
-    }
-
-    @JsonGetter("passengers")
-    public String getPassengers() {
-        return this.passengers;
-    }
-
-    @JsonSetter("max_atmosphering_speed")
-    public void setMaxAtmospheringSpeed(String maxAtmospheringSpeed) {
-        this.maxAtmospheringSpeed = maxAtmospheringSpeed;
-    }
-
-    @JsonGetter("max_atmosphering_speed")
-    public String getMaxAtmospheringSpeed() {
-        return this.maxAtmospheringSpeed;
-    }
-
-    @JsonSetter("cargo_capacity")
     public void setCargoCapacity(String cargoCapacity) {
         this.cargoCapacity = cargoCapacity;
     }
 
-    @JsonGetter("cargo_capacity")
     public String getCargoCapacity() {
         return this.cargoCapacity;
     }
 
-    @JsonSetter("consumables")
     public void setConsumables(String consumables) {
         this.consumables = consumables;
     }
 
-    @JsonGetter("consumables")
     public String getConsumables() {
         return this.consumables;
     }
 
-    @JsonSetter("films")
-    public void setFilms(java.util.List<String> films) {
-        this.films = films;
+    public void setCostInCredits(String costInCredits) {
+        this.costInCredits = costInCredits;
     }
 
-    @JsonGetter("films")
-    public java.util.List<String> getFilms() {
-        return this.films;
+    public String getCostInCredits() {
+        return this.costInCredits;
     }
 
-    @JsonSetter("pilots")
-    public void setPilots(java.util.List<String> pilots) {
-        this.pilots = pilots;
-    }
-
-    @JsonGetter("pilots")
-    public java.util.List<String> getPilots() {
-        return this.pilots;
-    }
-
-    @JsonSetter("url")
-    public void setUrl(String url) {
-        this.url = url;
-    }
-
-    @JsonGetter("url")
-    public String getUrl() {
-        return this.url;
-    }
-
-    @JsonSetter("created")
     public void setCreated(java.time.LocalDateTime created) {
         this.created = created;
     }
 
-    @JsonGetter("created")
     public java.time.LocalDateTime getCreated() {
         return this.created;
     }
 
-    @JsonSetter("edited")
+    public void setCrew(String crew) {
+        this.crew = crew;
+    }
+
+    public String getCrew() {
+        return this.crew;
+    }
+
     public void setEdited(java.time.LocalDateTime edited) {
         this.edited = edited;
     }
 
-    @JsonGetter("edited")
     public java.time.LocalDateTime getEdited() {
         return this.edited;
+    }
+
+    public void setFilms(java.util.List<String> films) {
+        this.films = films;
+    }
+
+    public java.util.List<String> getFilms() {
+        return this.films;
+    }
+
+    public void setLength(String length) {
+        this.length = length;
+    }
+
+    public String getLength() {
+        return this.length;
+    }
+
+    public void setManufacturer(String manufacturer) {
+        this.manufacturer = manufacturer;
+    }
+
+    public String getManufacturer() {
+        return this.manufacturer;
+    }
+
+    public void setMaxAtmospheringSpeed(String maxAtmospheringSpeed) {
+        this.maxAtmospheringSpeed = maxAtmospheringSpeed;
+    }
+
+    public String getMaxAtmospheringSpeed() {
+        return this.maxAtmospheringSpeed;
+    }
+
+    public void setModel(String model) {
+        this.model = model;
+    }
+
+    public String getModel() {
+        return this.model;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return this.name;
+    }
+
+    public void setPassengers(String passengers) {
+        this.passengers = passengers;
+    }
+
+    public String getPassengers() {
+        return this.passengers;
+    }
+
+    public void setPilots(java.util.List<String> pilots) {
+        this.pilots = pilots;
+    }
+
+    public java.util.List<String> getPilots() {
+        return this.pilots;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
+    public String getUrl() {
+        return this.url;
+    }
+
+    public void setVehicleClass(String vehicleClass) {
+        this.vehicleClass = vehicleClass;
+    }
+
+    public String getVehicleClass() {
+        return this.vehicleClass;
     }
 }
 

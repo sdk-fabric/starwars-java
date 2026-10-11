@@ -34,15 +34,6 @@ public class Client extends ClientAbstract {
         super(baseUrl, credentials);
     }
 
-    public PeopleTag people()
-    {
-        return new PeopleTag(
-            this.httpClient,
-            this.objectMapper,
-            this.parser
-        );
-    }
-
     public FilmTag film()
     {
         return new FilmTag(
@@ -52,9 +43,18 @@ public class Client extends ClientAbstract {
         );
     }
 
-    public StarshipTag starship()
+    public PeopleTag people()
     {
-        return new StarshipTag(
+        return new PeopleTag(
+            this.httpClient,
+            this.objectMapper,
+            this.parser
+        );
+    }
+
+    public PlanetTag planet()
+    {
+        return new PlanetTag(
             this.httpClient,
             this.objectMapper,
             this.parser
@@ -70,18 +70,18 @@ public class Client extends ClientAbstract {
         );
     }
 
-    public VehicleTag vehicle()
+    public StarshipTag starship()
     {
-        return new VehicleTag(
+        return new StarshipTag(
             this.httpClient,
             this.objectMapper,
             this.parser
         );
     }
 
-    public PlanetTag planet()
+    public VehicleTag vehicle()
     {
-        return new PlanetTag(
+        return new VehicleTag(
             this.httpClient,
             this.objectMapper,
             this.parser

@@ -9,170 +9,170 @@ import com.fasterxml.jackson.annotation.*;
 
 @JsonClassDescription("A Species is a type of person or character within the Star Wars Universe")
 public class Species {
-    private String name;
-    private String classification;
-    private String designation;
+    @JsonProperty("average_height")
     private String averageHeight;
+
+    @JsonProperty("average_lifespan")
     private String averageLifespan;
-    private String eyeColors;
-    private String hairColors;
-    private String skinColors;
-    private String language;
-    private String homeworld;
-    private java.util.List<String> people;
-    private java.util.List<String> films;
-    private String url;
+
+    @JsonProperty("classification")
+    private String classification;
+
+    @JsonProperty("created")
     private java.time.LocalDateTime created;
+
+    @JsonProperty("designation")
+    private String designation;
+
+    @JsonProperty("edited")
     private java.time.LocalDateTime edited;
 
-    @JsonSetter("name")
-    public void setName(String name) {
-        this.name = name;
-    }
+    @JsonProperty("eye_colors")
+    private String eyeColors;
 
-    @JsonGetter("name")
-    public String getName() {
-        return this.name;
-    }
+    @JsonProperty("films")
+    private java.util.List<String> films;
 
-    @JsonSetter("classification")
-    public void setClassification(String classification) {
-        this.classification = classification;
-    }
+    @JsonProperty("hair_colors")
+    private String hairColors;
 
-    @JsonGetter("classification")
-    public String getClassification() {
-        return this.classification;
-    }
+    @JsonProperty("homeworld")
+    private String homeworld;
 
-    @JsonSetter("designation")
-    public void setDesignation(String designation) {
-        this.designation = designation;
-    }
+    @JsonProperty("language")
+    private String language;
 
-    @JsonGetter("designation")
-    public String getDesignation() {
-        return this.designation;
-    }
+    @JsonProperty("name")
+    private String name;
 
-    @JsonSetter("average_height")
+    @JsonProperty("people")
+    private java.util.List<String> people;
+
+    @JsonProperty("skin_colors")
+    private String skinColors;
+
+    @JsonProperty("url")
+    private String url;
+
+
     public void setAverageHeight(String averageHeight) {
         this.averageHeight = averageHeight;
     }
 
-    @JsonGetter("average_height")
     public String getAverageHeight() {
         return this.averageHeight;
     }
 
-    @JsonSetter("average_lifespan")
     public void setAverageLifespan(String averageLifespan) {
         this.averageLifespan = averageLifespan;
     }
 
-    @JsonGetter("average_lifespan")
     public String getAverageLifespan() {
         return this.averageLifespan;
     }
 
-    @JsonSetter("eye_colors")
-    public void setEyeColors(String eyeColors) {
-        this.eyeColors = eyeColors;
+    public void setClassification(String classification) {
+        this.classification = classification;
     }
 
-    @JsonGetter("eye_colors")
-    public String getEyeColors() {
-        return this.eyeColors;
+    public String getClassification() {
+        return this.classification;
     }
 
-    @JsonSetter("hair_colors")
-    public void setHairColors(String hairColors) {
-        this.hairColors = hairColors;
-    }
-
-    @JsonGetter("hair_colors")
-    public String getHairColors() {
-        return this.hairColors;
-    }
-
-    @JsonSetter("skin_colors")
-    public void setSkinColors(String skinColors) {
-        this.skinColors = skinColors;
-    }
-
-    @JsonGetter("skin_colors")
-    public String getSkinColors() {
-        return this.skinColors;
-    }
-
-    @JsonSetter("language")
-    public void setLanguage(String language) {
-        this.language = language;
-    }
-
-    @JsonGetter("language")
-    public String getLanguage() {
-        return this.language;
-    }
-
-    @JsonSetter("homeworld")
-    public void setHomeworld(String homeworld) {
-        this.homeworld = homeworld;
-    }
-
-    @JsonGetter("homeworld")
-    public String getHomeworld() {
-        return this.homeworld;
-    }
-
-    @JsonSetter("people")
-    public void setPeople(java.util.List<String> people) {
-        this.people = people;
-    }
-
-    @JsonGetter("people")
-    public java.util.List<String> getPeople() {
-        return this.people;
-    }
-
-    @JsonSetter("films")
-    public void setFilms(java.util.List<String> films) {
-        this.films = films;
-    }
-
-    @JsonGetter("films")
-    public java.util.List<String> getFilms() {
-        return this.films;
-    }
-
-    @JsonSetter("url")
-    public void setUrl(String url) {
-        this.url = url;
-    }
-
-    @JsonGetter("url")
-    public String getUrl() {
-        return this.url;
-    }
-
-    @JsonSetter("created")
     public void setCreated(java.time.LocalDateTime created) {
         this.created = created;
     }
 
-    @JsonGetter("created")
     public java.time.LocalDateTime getCreated() {
         return this.created;
     }
 
-    @JsonSetter("edited")
+    public void setDesignation(String designation) {
+        this.designation = designation;
+    }
+
+    public String getDesignation() {
+        return this.designation;
+    }
+
     public void setEdited(java.time.LocalDateTime edited) {
         this.edited = edited;
     }
 
-    @JsonGetter("edited")
     public java.time.LocalDateTime getEdited() {
         return this.edited;
+    }
+
+    public void setEyeColors(String eyeColors) {
+        this.eyeColors = eyeColors;
+    }
+
+    public String getEyeColors() {
+        return this.eyeColors;
+    }
+
+    public void setFilms(java.util.List<String> films) {
+        this.films = films;
+    }
+
+    public java.util.List<String> getFilms() {
+        return this.films;
+    }
+
+    public void setHairColors(String hairColors) {
+        this.hairColors = hairColors;
+    }
+
+    public String getHairColors() {
+        return this.hairColors;
+    }
+
+    public void setHomeworld(String homeworld) {
+        this.homeworld = homeworld;
+    }
+
+    public String getHomeworld() {
+        return this.homeworld;
+    }
+
+    public void setLanguage(String language) {
+        this.language = language;
+    }
+
+    public String getLanguage() {
+        return this.language;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return this.name;
+    }
+
+    public void setPeople(java.util.List<String> people) {
+        this.people = people;
+    }
+
+    public java.util.List<String> getPeople() {
+        return this.people;
+    }
+
+    public void setSkinColors(String skinColors) {
+        this.skinColors = skinColors;
+    }
+
+    public String getSkinColors() {
+        return this.skinColors;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
+    public String getUrl() {
+        return this.url;
     }
 }
 

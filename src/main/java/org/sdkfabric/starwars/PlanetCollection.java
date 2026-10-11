@@ -8,14 +8,14 @@ package org.sdkfabric.starwars;
 import com.fasterxml.jackson.annotation.*;
 
 public class PlanetCollection extends Collection {
+    @JsonProperty("results")
     private java.util.List<Planet> results;
 
-    @JsonSetter("results")
+
     public void setResults(java.util.List<Planet> results) {
         this.results = results;
     }
 
-    @JsonGetter("results")
     public java.util.List<Planet> getResults() {
         return this.results;
     }

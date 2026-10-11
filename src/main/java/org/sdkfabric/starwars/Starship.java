@@ -9,221 +9,221 @@ import com.fasterxml.jackson.annotation.*;
 
 @JsonClassDescription("A Starship is a single transport craft that has hyperdrive capability")
 public class Starship {
-    @JsonPropertyDescription("The name of this starship. The common name, such as \"Death Star\"")
-    private String name;
-    @JsonPropertyDescription("The model or official name of this starship. Such as \"T-65 X-wing\" or \"DS-1 Orbital Battle Station\"")
-    private String model;
-    @JsonPropertyDescription("The class of this starship, such as \"Starfighter\" or \"Deep Space Mobile Battlestation\"")
-    private String starshipClass;
-    @JsonPropertyDescription("The manufacturer of this starship. Comma separated if more than one")
-    private String manufacturer;
-    @JsonPropertyDescription("The cost of this starship new, in galactic credits")
-    private String costInCredits;
-    @JsonPropertyDescription("The length of this starship in meters")
-    private String length;
-    @JsonPropertyDescription("The number of personnel needed to run or pilot this starship")
-    private String crew;
-    @JsonPropertyDescription("The number of non-essential people this starship can transport")
-    private String passengers;
-    @JsonPropertyDescription("The maximum speed of this starship in the atmosphere. \"N/A\" if this starship is incapable of atmospheric flight")
-    private String maxAtmospheringSpeed;
-    @JsonPropertyDescription("The class of this starships hyperdrive")
-    private String hyperdriveRating;
     @JsonPropertyDescription("The Maximum number of Megalights this starship can travel in a standard hour. A \"Megalight\" is a standard unit of distance and has never been defined before within the Star Wars universe. This figure is only really useful for measuring the difference in speed of starships. We can assume it is similar to AU, the distance between our Sun (Sol) and Earth")
+    @JsonProperty("MGLT")
     private String mGLT;
+
     @JsonPropertyDescription("The maximum number of kilograms that this starship can transport")
+    @JsonProperty("cargo_capacity")
     private String cargoCapacity;
+
     @JsonPropertyDescription("The maximum length of time that this starship can provide consumables for its entire crew without having to resupply")
+    @JsonProperty("consumables")
     private String consumables;
-    @JsonPropertyDescription("An array of Film URL Resources that this starship has appeared in")
-    private java.util.List<String> films;
-    @JsonPropertyDescription("An array of People URL Resources that this starship has been piloted by")
-    private java.util.List<String> pilots;
-    @JsonPropertyDescription("The hypermedia URL of this resource")
-    private String url;
+
+    @JsonPropertyDescription("The cost of this starship new, in galactic credits")
+    @JsonProperty("cost_in_credits")
+    private String costInCredits;
+
     @JsonPropertyDescription("The ISO 8601 date format of the time that this resource was created")
+    @JsonProperty("created")
     private java.time.LocalDateTime created;
+
+    @JsonPropertyDescription("The number of personnel needed to run or pilot this starship")
+    @JsonProperty("crew")
+    private String crew;
+
     @JsonPropertyDescription("The ISO 8601 date format of the time that this resource was edited")
+    @JsonProperty("edited")
     private java.time.LocalDateTime edited;
 
-    @JsonSetter("name")
-    public void setName(String name) {
-        this.name = name;
-    }
+    @JsonPropertyDescription("An array of Film URL Resources that this starship has appeared in")
+    @JsonProperty("films")
+    private java.util.List<String> films;
 
-    @JsonGetter("name")
-    public String getName() {
-        return this.name;
-    }
+    @JsonPropertyDescription("The class of this starships hyperdrive")
+    @JsonProperty("hyperdrive_rating")
+    private String hyperdriveRating;
 
-    @JsonSetter("model")
-    public void setModel(String model) {
-        this.model = model;
-    }
+    @JsonPropertyDescription("The length of this starship in meters")
+    @JsonProperty("length")
+    private String length;
 
-    @JsonGetter("model")
-    public String getModel() {
-        return this.model;
-    }
+    @JsonPropertyDescription("The manufacturer of this starship. Comma separated if more than one")
+    @JsonProperty("manufacturer")
+    private String manufacturer;
 
-    @JsonSetter("starship_class")
-    public void setStarshipClass(String starshipClass) {
-        this.starshipClass = starshipClass;
-    }
+    @JsonPropertyDescription("The maximum speed of this starship in the atmosphere. \"N/A\" if this starship is incapable of atmospheric flight")
+    @JsonProperty("max_atmosphering_speed")
+    private String maxAtmospheringSpeed;
 
-    @JsonGetter("starship_class")
-    public String getStarshipClass() {
-        return this.starshipClass;
-    }
+    @JsonPropertyDescription("The model or official name of this starship. Such as \"T-65 X-wing\" or \"DS-1 Orbital Battle Station\"")
+    @JsonProperty("model")
+    private String model;
 
-    @JsonSetter("manufacturer")
-    public void setManufacturer(String manufacturer) {
-        this.manufacturer = manufacturer;
-    }
+    @JsonPropertyDescription("The name of this starship. The common name, such as \"Death Star\"")
+    @JsonProperty("name")
+    private String name;
 
-    @JsonGetter("manufacturer")
-    public String getManufacturer() {
-        return this.manufacturer;
-    }
+    @JsonPropertyDescription("The number of non-essential people this starship can transport")
+    @JsonProperty("passengers")
+    private String passengers;
 
-    @JsonSetter("cost_in_credits")
-    public void setCostInCredits(String costInCredits) {
-        this.costInCredits = costInCredits;
-    }
+    @JsonPropertyDescription("An array of People URL Resources that this starship has been piloted by")
+    @JsonProperty("pilots")
+    private java.util.List<String> pilots;
 
-    @JsonGetter("cost_in_credits")
-    public String getCostInCredits() {
-        return this.costInCredits;
-    }
+    @JsonPropertyDescription("The class of this starship, such as \"Starfighter\" or \"Deep Space Mobile Battlestation\"")
+    @JsonProperty("starship_class")
+    private String starshipClass;
 
-    @JsonSetter("length")
-    public void setLength(String length) {
-        this.length = length;
-    }
+    @JsonPropertyDescription("The hypermedia URL of this resource")
+    @JsonProperty("url")
+    private String url;
 
-    @JsonGetter("length")
-    public String getLength() {
-        return this.length;
-    }
 
-    @JsonSetter("crew")
-    public void setCrew(String crew) {
-        this.crew = crew;
-    }
-
-    @JsonGetter("crew")
-    public String getCrew() {
-        return this.crew;
-    }
-
-    @JsonSetter("passengers")
-    public void setPassengers(String passengers) {
-        this.passengers = passengers;
-    }
-
-    @JsonGetter("passengers")
-    public String getPassengers() {
-        return this.passengers;
-    }
-
-    @JsonSetter("max_atmosphering_speed")
-    public void setMaxAtmospheringSpeed(String maxAtmospheringSpeed) {
-        this.maxAtmospheringSpeed = maxAtmospheringSpeed;
-    }
-
-    @JsonGetter("max_atmosphering_speed")
-    public String getMaxAtmospheringSpeed() {
-        return this.maxAtmospheringSpeed;
-    }
-
-    @JsonSetter("hyperdrive_rating")
-    public void setHyperdriveRating(String hyperdriveRating) {
-        this.hyperdriveRating = hyperdriveRating;
-    }
-
-    @JsonGetter("hyperdrive_rating")
-    public String getHyperdriveRating() {
-        return this.hyperdriveRating;
-    }
-
-    @JsonSetter("MGLT")
     public void setMGLT(String mGLT) {
         this.mGLT = mGLT;
     }
 
-    @JsonGetter("MGLT")
     public String getMGLT() {
         return this.mGLT;
     }
 
-    @JsonSetter("cargo_capacity")
     public void setCargoCapacity(String cargoCapacity) {
         this.cargoCapacity = cargoCapacity;
     }
 
-    @JsonGetter("cargo_capacity")
     public String getCargoCapacity() {
         return this.cargoCapacity;
     }
 
-    @JsonSetter("consumables")
     public void setConsumables(String consumables) {
         this.consumables = consumables;
     }
 
-    @JsonGetter("consumables")
     public String getConsumables() {
         return this.consumables;
     }
 
-    @JsonSetter("films")
-    public void setFilms(java.util.List<String> films) {
-        this.films = films;
+    public void setCostInCredits(String costInCredits) {
+        this.costInCredits = costInCredits;
     }
 
-    @JsonGetter("films")
-    public java.util.List<String> getFilms() {
-        return this.films;
+    public String getCostInCredits() {
+        return this.costInCredits;
     }
 
-    @JsonSetter("pilots")
-    public void setPilots(java.util.List<String> pilots) {
-        this.pilots = pilots;
-    }
-
-    @JsonGetter("pilots")
-    public java.util.List<String> getPilots() {
-        return this.pilots;
-    }
-
-    @JsonSetter("url")
-    public void setUrl(String url) {
-        this.url = url;
-    }
-
-    @JsonGetter("url")
-    public String getUrl() {
-        return this.url;
-    }
-
-    @JsonSetter("created")
     public void setCreated(java.time.LocalDateTime created) {
         this.created = created;
     }
 
-    @JsonGetter("created")
     public java.time.LocalDateTime getCreated() {
         return this.created;
     }
 
-    @JsonSetter("edited")
+    public void setCrew(String crew) {
+        this.crew = crew;
+    }
+
+    public String getCrew() {
+        return this.crew;
+    }
+
     public void setEdited(java.time.LocalDateTime edited) {
         this.edited = edited;
     }
 
-    @JsonGetter("edited")
     public java.time.LocalDateTime getEdited() {
         return this.edited;
+    }
+
+    public void setFilms(java.util.List<String> films) {
+        this.films = films;
+    }
+
+    public java.util.List<String> getFilms() {
+        return this.films;
+    }
+
+    public void setHyperdriveRating(String hyperdriveRating) {
+        this.hyperdriveRating = hyperdriveRating;
+    }
+
+    public String getHyperdriveRating() {
+        return this.hyperdriveRating;
+    }
+
+    public void setLength(String length) {
+        this.length = length;
+    }
+
+    public String getLength() {
+        return this.length;
+    }
+
+    public void setManufacturer(String manufacturer) {
+        this.manufacturer = manufacturer;
+    }
+
+    public String getManufacturer() {
+        return this.manufacturer;
+    }
+
+    public void setMaxAtmospheringSpeed(String maxAtmospheringSpeed) {
+        this.maxAtmospheringSpeed = maxAtmospheringSpeed;
+    }
+
+    public String getMaxAtmospheringSpeed() {
+        return this.maxAtmospheringSpeed;
+    }
+
+    public void setModel(String model) {
+        this.model = model;
+    }
+
+    public String getModel() {
+        return this.model;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return this.name;
+    }
+
+    public void setPassengers(String passengers) {
+        this.passengers = passengers;
+    }
+
+    public String getPassengers() {
+        return this.passengers;
+    }
+
+    public void setPilots(java.util.List<String> pilots) {
+        this.pilots = pilots;
+    }
+
+    public java.util.List<String> getPilots() {
+        return this.pilots;
+    }
+
+    public void setStarshipClass(String starshipClass) {
+        this.starshipClass = starshipClass;
+    }
+
+    public String getStarshipClass() {
+        return this.starshipClass;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
+    public String getUrl() {
+        return this.url;
     }
 }
 
