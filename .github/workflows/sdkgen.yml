@@ -46,6 +46,7 @@ jobs:
         with:
           gpg_private_key: ${{ secrets.GPG_PRIVATE_KEY }}
           passphrase: ${{ secrets.GPG_PASSPHRASE }}
+          trust_level: ultimate
       - name: Publish package
         run: mvn --batch-mode clean deploy -Dgpg.keyname=${{ steps.import-gpg.outputs.keyid }}
         env:
