@@ -42,8 +42,9 @@ jobs:
         run: |
           MVN_VERSION="3.9.9"
           wget -q https://archive.apache.org/dist/maven/maven-3/${MVN_VERSION}/binaries/apache-maven-${MVN_VERSION}-bin.tar.gz
-          sudo tar -xzf apache-maven-${MVN_VERSION}-bin.tar.gz -C /opt
-          sudo ln -s /opt/apache-maven-${MVN_VERSION}/bin/mvn /usr/bin/mvn
+          tar -xzf apache-maven-${MVN_VERSION}-bin.tar.gz
+          sudo mv apache-maven-${MVN_VERSION} /opt/maven
+          echo "/opt/maven/bin" >> $GITHUB_PATH
       - name: Update version
         run: mvn versions:set -DnewVersion="${{ inputs.typehub_version }}"
       - name: Import GPG key
