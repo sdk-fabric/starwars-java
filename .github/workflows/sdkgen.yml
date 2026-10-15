@@ -38,6 +38,12 @@ jobs:
           server-id: central
           server-username-env-var: MAVEN_USERNAME
           server-password-env-var: MAVEN_PASSWORD
+      - name: Install Maven 3.9.9
+        run: |
+          MVN_VERSION="3.9.9"
+          wget -q https://archive.apache.org/dist/maven/maven-3/${MVN_VERSION}/binaries/apache-maven-${MVN_VERSION}-bin.tar.gz
+          sudo tar -xzf apache-maven-${MVN_VERSION}-bin.tar.gz -C /opt
+          sudo ln -s /opt/apache-maven-${MVN_VERSION}/bin/mvn /usr/bin/mvn
       - name: Update version
         run: mvn versions:set -DnewVersion="${{ inputs.typehub_version }}"
       - name: Import GPG key
